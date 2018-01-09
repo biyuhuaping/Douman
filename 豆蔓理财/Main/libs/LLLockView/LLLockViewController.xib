@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LLLockViewController">
+            <connections>
+                <outlet property="forgetButton" destination="ZGi-Sp-ea4" id="Bbz-EI-Yd4"/>
+                <outlet property="indecator" destination="orT-dI-fHQ" id="y4n-7w-qzj"/>
+                <outlet property="lockview" destination="EmR-0o-eRR" id="ZPo-wE-rfu"/>
+                <outlet property="tipLable" destination="sEp-bd-bFa" id="3nJ-Ue-Cg5"/>
+                <outlet property="userLabel" destination="4R0-pH-EpW" id="YUK-GE-Rtp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yjg-lg-hOn">
+                    <rect key="frame" x="0.0" y="25" width="414" height="711"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orT-dI-fHQ" customClass="LLLockIndicator">
+                    <rect key="frame" x="177" y="25" width="60" height="60"/>
+                    <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="cVI-uh-DB1"/>
+                        <constraint firstAttribute="height" constant="60" id="r73-OX-msi"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4R0-pH-EpW">
+                    <rect key="frame" x="0.0" y="85" width="414" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="frL-l4-2PW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" red="0.21568627450980393" green="0.78431372549019607" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入解锁密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="sEp-bd-bFa">
+                    <rect key="frame" x="0.0" y="145" width="414" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="ohh-6c-an2"/>
+                    </constraints>
+                    <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.98980444669723511" green="0.43056139349937439" blue="0.33501613140106201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmR-0o-eRR" customClass="LLLockView">
+                    <rect key="frame" x="47" y="181" width="320" height="320"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="320" id="HlG-NA-hil"/>
+                        <constraint firstAttribute="width" constant="320" id="T1W-FY-Xod"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGi-Sp-ea4">
+                    <rect key="frame" x="0.0" y="696" width="414" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="Bfv-MQ-Ls0"/>
+                    </constraints>
+                    <state key="normal" title="忘记手势密码">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="forgetBtnAction:" destination="-1" eventType="touchUpInside" id="1QQ-26-MQn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sEp-bd-bFa" firstAttribute="top" secondItem="4R0-pH-EpW" secondAttribute="bottom" constant="35" id="2P3-18-hZO"/>
+                <constraint firstItem="4R0-pH-EpW" firstAttribute="top" secondItem="orT-dI-fHQ" secondAttribute="bottom" id="2xq-Bu-4Bu"/>
+                <constraint firstItem="Yjg-lg-hOn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8WH-ZG-Ipc"/>
+                <constraint firstItem="ZGi-Sp-ea4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8sb-mF-9H3"/>
+                <constraint firstItem="4R0-pH-EpW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A4g-Wa-q3p"/>
+                <constraint firstItem="ZGi-Sp-ea4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="DDS-y2-Vmr"/>
+                <constraint firstItem="sEp-bd-bFa" firstAttribute="width" secondItem="4R0-pH-EpW" secondAttribute="width" id="Ef7-fM-nN8"/>
+                <constraint firstAttribute="bottom" secondItem="ZGi-Sp-ea4" secondAttribute="bottom" constant="1" id="JyE-WU-mql"/>
+                <constraint firstItem="ZGi-Sp-ea4" firstAttribute="top" secondItem="Yjg-lg-hOn" secondAttribute="bottom" constant="-40" id="Qy9-jB-vkr"/>
+                <constraint firstItem="Yjg-lg-hOn" firstAttribute="top" secondItem="EmR-0o-eRR" secondAttribute="bottom" constant="-476" id="YGP-pQ-3Ge"/>
+                <constraint firstAttribute="trailing" secondItem="Yjg-lg-hOn" secondAttribute="trailing" id="grJ-1u-REw"/>
+                <constraint firstItem="sEp-bd-bFa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="had-JL-RyB"/>
+                <constraint firstItem="orT-dI-fHQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ifR-zB-TLM"/>
+                <constraint firstItem="orT-dI-fHQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="l3u-AB-mZX"/>
+                <constraint firstItem="4R0-pH-EpW" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="p7t-7L-Cjw"/>
+                <constraint firstItem="EmR-0o-eRR" firstAttribute="top" secondItem="sEp-bd-bFa" secondAttribute="bottom" constant="8" id="tYU-0i-aVI"/>
+                <constraint firstItem="EmR-0o-eRR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xHa-SB-72t"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="86" y="247"/>
+        </view>
+    </objects>
+</document>
