@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E9C984089F86F733FC5F1935B38F76161AE35C87",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E9C984089F86F733FC5F1935B38F76161AE35C87" : 9223372036854775807,
+    "1B5A03F4D115691D9008D1546AE1707022C53540" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DF7FD2C6-A63C-4346-8DA9-8447648F04ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E9C984089F86F733FC5F1935B38F76161AE35C87" : "douman\/",
+    "1B5A03F4D115691D9008D1546AE1707022C53540" : "..\/%E8%B4%A2%E8%B7%AF%E9%80%9A%E7%A7%BB%E5%8A%A8"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "豆蔓理财",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "豆蔓理财\/豆蔓理财.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "192.168.23.217%3A\/Users\/guomin\/git\/%E8%B4%A2%E8%B7%AF%E9%80%9A",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1B5A03F4D115691D9008D1546AE1707022C53540"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "192.168.23.217:\/Users\/guomin\/git\/douman",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E9C984089F86F733FC5F1935B38F76161AE35C87"
+    }
+  ]
+}

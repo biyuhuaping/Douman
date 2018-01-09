@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8c46;&#x8513;&#x7406;&#x8d22;/&#x9996;&#x9875;/Manager/GZHomePageRequestManager.m"
+            timestampString = "505460327.837814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "576"
+            endingLineNumber = "576"
+            landmarkName = "-requestForPurchasingAssetsWithUserId:accessToken:assetId:investAmount:couponId:source:successBlock:failureBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8c46;&#x8513;&#x7406;&#x8d22;/&#x9996;&#x9875;/Manager/GZHomePageRequestManager.m"
+            timestampString = "505460327.837814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "708"
+            endingLineNumber = "708"
+            landmarkName = "-requestForSettledAssetesWithUserId:repayMethod:amountType:months:page:size:access_token:successBlock:failureBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8c46;&#x8513;&#x7406;&#x8d22;/&#x6211;&#x7684;/Manager/LJQMineRequestManager.m"
+            timestampString = "505398872.128668"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
+            landmarkName = "-LJQSetTradePassWordLoginPd:tradePd:successBlock:faild:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8c46;&#x8513;&#x7406;&#x8d22;/&#x6211;&#x7684;/Manager/LJQMineRequestManager.m"
+            timestampString = "505400338.716513"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "395"
+            endingLineNumber = "395"
+            landmarkName = "-LJQSetTradePassWordLoginPd:tradePd:successBlock:faild:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8c46;&#x8513;&#x7406;&#x8d22;/&#x6211;&#x7684;/Manager/LJQMineRequestManager.m"
+            timestampString = "505400338.716513"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
+            landmarkName = "-LJQSetTradePassWordLoginPd:tradePd:successBlock:faild:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8c46;&#x8513;&#x7406;&#x8d22;/&#x6211;&#x7684;/Manager/LJQMineRequestManager.m"
+            timestampString = "505400338.716513"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "388"
+            endingLineNumber = "388"
+            landmarkName = "-LJQSetTradePassWordLoginPd:tradePd:successBlock:faild:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x8c46;&#x8513;&#x7406;&#x8d22;/&#x9996;&#x9875;/Manager/GZHomePageRequestManager.m"
+            timestampString = "505461348.334136"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "669"
+            endingLineNumber = "669"
+            landmarkName = "-requestForHomePageuserAccountWithUserId:repaymethod:orderType:months:page:size:isSevenBack:access_token:successBlock:failureBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
