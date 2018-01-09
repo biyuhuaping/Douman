@@ -1,0 +1,223 @@
+//
+//  Douman.pch
+//  豆蔓理财
+//
+//  Created by edz on 2016/11/14.
+//  Copyright © 2016年 edz. All rights reserved.
+//
+
+#ifndef Douman_pch
+#define Douman_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#endif /* Douman_pch */
+
+#import "Masonry.h"
+#import "AFNetworking.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import <UIKit/UIKit.h>
+#import "HMNavigationController.h"
+#import "UILabel+DMLabel.h"
+#import <MBProgressHUD.h>
+#import "HUDManager.h"
+#import <YYModel.h>
+#import "NSString+Comma.h"
+#import "GZHomePageRequestManager.h"
+#import "LJQMineRequestManager.h"
+#import <JavaScriptCore/JavaScriptCore.h>
+#import "ShareManager.h"
+#import "CustomTextField.h"
+#import "UIView+VsualFormat.h"
+#import <UMMobClick/MobClick.h>
+#import "CLTShareView.h"
+#import "MLInputDodger.h"
+#import "CheckMobile.h"
+#import <SDCycleScrollView.h>
+#import "WXApi.h"
+
+#define LJQ_VIEW_Width(v)  v.frame.size.width
+#define LJQ_VIEW_Height(v)  v.frame.size.height
+#define LJQ_VIEW_MaxX(v)  CGRectGetMaxX(v.frame)
+#define LJQ_VIEW_MaxY(v)  CGRectGetMaxY(v.frame)
+
+
+
+
+#define spaceline 11
+//数据请求每页加载的数据条数
+#define sizeOfpage 10
+
+#ifdef DEBUG
+#define NSLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#else
+#define NSLog(format, ...)
+#endif
+
+#ifdef DEBUG // 调试状态, 打开LOG功能
+#define DMLog(...) NSLog(__VA_ARGS__)
+//测试
+//#define mainUrl @"http://user.cailu360.com:8808/"
+//#define weburl @"http://www.cailu360.com:8808/"
+//#define huishangUrl @"https://fbtest.sumapay.com/hsbp2pUser/merchant.do"
+
+//线上
+#define mainUrl @"https://user.zlot.cn/"
+#define weburl @"https://www.zlot.cn/"
+#define huishangUrl @"https://www.sumapay.com/hsbp2pUser/merchant.do"
+
+#define argument1 @"fromsource=1"
+#define hostName(pathName) [[mainUrl stringByAppendingString:pathName] stringByAppendingString:[NSString stringWithFormat:@"%@%@",[[mainUrl stringByAppendingString:pathName] containsString:@"?"]?@"&":@"?",argument1]]
+
+#define KeepRecordUrl @"https://pre.51cunzheng.com/searchResult?r="
+#define KeepRecord(Parameter1) [KeepRecordUrl stringByAppendingString:Parameter1]
+
+#else // 发布状态, 关闭LOG功能
+#define DMLog(...)
+#define mainUrl @"https://user.zlot.cn/"
+#define weburl @"https://www.zlot.cn/"
+#define huishangUrl @"https://www.sumapay.com/hsbp2pUser/merchant.do"
+
+#define argument1 @"fromsource=1"
+#define hostName(pathName) [[mainUrl stringByAppendingString:pathName] stringByAppendingString:[NSString stringWithFormat:@"%@%@",[[mainUrl stringByAppendingString:pathName] containsString:@"?"]?@"&":@"?",argument1]]
+
+#define KeepRecordUrl @"https://www.51cunzheng.com/searchResult?r="
+#define KeepRecord(Parameter1) [KeepRecordUrl stringByAppendingString:Parameter1]
+
+#endif
+
+
+#define ShowMessage(Msg) [[HUDManager manager] showHudWithText:Msg]
+//设备宽/高/坐标
+#define DMDeviceWidth [UIScreen mainScreen].bounds.size.width
+#define DMDeviceHeight [UIScreen mainScreen].bounds.size.height
+#define DMDeviceFrame [UIScreen mainScreen].bounds
+
+//获取用户ID
+#define USER_ID [[NSUserDefaults standardUserDefaults] objectForKey:@"userId"]
+#define PhoneNumber [[NSUserDefaults standardUserDefaults] objectForKey:@"phoneNumber"]
+#define AccessToken [[NSUserDefaults standardUserDefaults] objectForKey:@"access_token"]
+#define REALNAME [[NSUserDefaults standardUserDefaults] objectForKey:@"realName"]
+
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width //屏幕宽度
+#define CARD_NUMBER [[NSUserDefaults standardUserDefaults] objectForKey:@"cardNbr"] //徽商账号
+#define SOURCE [[NSUserDefaults standardUserDefaults] objectForKey:@"source"] //是否是借款人
+#define ASSIGNSIGNFlag [[NSUserDefaults standardUserDefaults] objectForKey:@"assignSignFlag"] //是否债转签约
+// 颜色宏
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define UIColorFromRGBA(rgbValue,alphaValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(float)alphaValue]
+
+#define SY_MULTILINE_TEXTSIZE(text, font, maxSize, mode) [text length] > 0 ? [text \
+sizeWithFont:font constrainedToSize:maxSize lineBreakMode:mode] : CGSizeZero;
+// 是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+//获取 iPhone
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define kScreenIphone5 ((［UIScreen mainScreen] bounds].size.height)>=568)
+
+#define BANNER_HEIGHT 180*DMDeviceWidth/375
+
+/**
+ *  应用的字体大小
+ **/
+#define SYSTEMFONT(font)  [UIFont systemFontOfSize:font];
+#define BOLDSYSTEMFONT(font)  [UIFont boldSystemFontOfSize:font]
+#define FONT_Regular(font) [UIFont fontWithName:@"PingFangSC-Regular" size:font]
+#define FONT_Light(font) [UIFont fontWithName:@"PingFangSC-Light" size:font]
+
+/*
+ *  背景是白色的一些常用颜色
+ */
+
+#define WITHEBACK_LINE          UIColorFromRGB(0Xf0f0f0)
+#define WITHEBACK_DEFAULT       UIColorFromRGB(0Xababb1)
+#define WITHEBACK_INPUT         UIColorFromRGB(0x6d727a)
+
+//改版颜色
+#define MainRed                 UIColorFromRGB(0xfc6f57)
+#define MainGreen               UIColorFromRGB(0x00c79f)
+#define DarkGray                UIColorFromRGB(0x4b5159)
+#define LightGray               UIColorFromRGB(0x7b7b7b)
+#define mainBack                UIColorFromRGB(0xffffff)
+#define MainLine                UIColorFromRGB(0xdedede)
+#define MainF5                  UIColorFromRGB(0xf5f5f5)
+
+#define barHidden [[NSUserDefaults standardUserDefaults] objectForKey:@"barHidden"]
+
+
+#define FONT_SIZE_10   10.0
+#define FONT_SIZE_12   12.0
+#define FONT_SIZE_13   13.0
+#define FONT_SIZE_14   14.0
+#define FONT_SIZE_15   15.0
+#define FONT_SIZE_16   16.0
+#define FONT_SIZE_18   18.0
+
+typedef NS_ENUM(NSInteger,UITableViewOperation) {
+    
+    UITableViewOperationPullUp,
+    
+    UITableViewOperationPullDown
+};
+
+static inline NSAttributedString* CombineAttributedStrings(NSAttributedString *attStr_1, NSAttributedString *attStr_2) {
+    
+    NSMutableAttributedString *mutableAttString = [[NSMutableAttributedString alloc]initWithAttributedString:attStr_1];
+    [mutableAttString appendAttributedString:attStr_2];
+    return mutableAttString;
+}
+
+static inline CGFloat DistanceBetweenPoints(CGPoint startPoint, CGPoint endPoint) {
+    
+    CGFloat distanceX = endPoint.x-startPoint.x;
+    CGFloat distanceY = endPoint.y-startPoint.y;
+    CGFloat distance = sqrt(pow(distanceX, 2) + pow(distanceY, 2));
+    return distance;
+}
+
+static inline BOOL JudgeStatusOfNetwork() {
+    
+    NSUserDefaults *manager = [NSUserDefaults standardUserDefaults];
+    
+    NSString *value = [manager objectForKey:@"reachability"];
+    
+    if([value isEqualToString:@"0"]) {
+        
+        return NO;
+    }else {
+        return YES;
+    }
+}
+
+static NSString *const dataInfoMessage = @"数据正在快速赶来...";
+
+// 手势锁
+#define Lock [[NSUserDefaults standardUserDefaults] objectForKey:@"lock"]
+
+static inline BOOL isOrEmpty(NSString *string){
+    
+    if ([string isKindOfClass:[NSNumber class]]) {
+        if ([[NSString stringWithFormat:@"%@",string] isEqualToString:@"0"]) {
+            return YES;
+        }else{
+            return NO;
+        }
+    }
+    
+    if (string == nil || string == NULL || ![string isKindOfClass:[NSString class]]) {
+        return YES;
+    }
+    if ([string isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
+        return YES;
+    }
+    return NO;
+}
+
